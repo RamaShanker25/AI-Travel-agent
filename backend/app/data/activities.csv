@@ -1,0 +1,4 @@
+activity_id,location_id,activity_name,must_see_place,typical_duration_mins,estimated_cost_inr
+1,1,Hiking,Manali Viewpoint,180,500
+2,1,Sightseeing,Hadimba Temple,90,200
+3,2,Heritage Walk,The Ridge,120,300

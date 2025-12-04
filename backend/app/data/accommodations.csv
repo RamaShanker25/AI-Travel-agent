@@ -1,0 +1,2 @@
+hotel_id,city_id,name,category,star_rating,price_per_night_inr,amenities,nearest_attraction,user_rating
+H0001,1,Grand Resort Manali,Budget,3,2500,"wifi,breakfast",Hadimba Temple,4.2
