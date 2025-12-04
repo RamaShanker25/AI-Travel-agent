@@ -1,0 +1,1 @@
+import React from "react";import Chat from "./components/Chat";export default function App(){ const backendBase = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000"; return (<div style={{padding:20}}><h2>LLM Travel Agent</h2><Chat backendBase={backendBase} /></div>); }
