@@ -1,16 +1,22 @@
 import os, json
 from typing import List, Dict
-from openai import OpenAI
+from openai import AzureOpenAI
 from .tools import tool_get_weather, tool_generate_itinerary, load_data_snapshot
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# ✅ Azure OpenAI Client
+client = AzureOpenAI(
+    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+    api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview")
+)
 
-MODEL = os.getenv("LLM_MODEL", "gpt-4o-mini")
+# ✅ This is your Azure DEPLOYMENT NAME, NOT model name
+AZURE_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 
 FUNCTIONS = [
     {
         "name": "get_destination_weather",
-        "description": "Fetch weather for a destination id and date range (returns summary+details).",
+        "description": "Fetch weather for a destination id and date range.",
         "parameters": {
             "type": "object",
             "properties": {
@@ -23,7 +29,7 @@ FUNCTIONS = [
     },
     {
         "name": "generate_itinerary",
-        "description": "Generate a structured itinerary using CSV data. All factual details come from this tool.",
+        "description": "Generate itinerary using CSV data.",
         "parameters": {
             "type": "object",
             "properties": {
@@ -47,9 +53,9 @@ RULES:
 1. Never invent hotels, activities, transport, or costs.
 2. Ask follow-up questions if destination, dates, or budget are missing.
 3. Use tools when enough information is available.
-4. You may add atmospheric tips (clothing, photography, etc).
+4. Add travel tips and weather-based alerts when relevant.
 
-Data snapshot (ground truth):
+Data snapshot:
 {data_snapshot}
 """
 
@@ -62,14 +68,9 @@ async def handle_chat_message(message: str, conversation: List[Dict]):
     messages.append({"role": "user", "content": message})
 
     response = client.chat.completions.create(
-        model=MODEL,
+        model=AZURE_DEPLOYMENT_NAME,  # ✅ Azure requires DEPLOYMENT name here
         messages=messages,
-        tools=[
-            {
-                "type": "function",
-                "function": fn
-            } for fn in FUNCTIONS
-        ],
+        tools=[{"type": "function", "function": fn} for fn in FUNCTIONS],
         tool_choice="auto",
         temperature=0.2,
         max_tokens=1000
@@ -95,7 +96,7 @@ async def handle_chat_message(message: str, conversation: List[Dict]):
             tool_result = {"error": "Unknown tool"}
 
         followup = client.chat.completions.create(
-            model=MODEL,
+            model=AZURE_DEPLOYMENT_NAME,
             messages=[
                 *messages,
                 msg,
@@ -112,5 +113,4 @@ async def handle_chat_message(message: str, conversation: List[Dict]):
         final_text = followup.choices[0].message.content
         return {"type": "final", "reply": final_text}
 
-    # ✅ NORMAL TEXT RESPONSE
     return {"type": "reply", "reply": msg.content}
