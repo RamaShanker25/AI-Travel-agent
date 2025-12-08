@@ -10,10 +10,9 @@ client = AzureOpenAI(
     api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview")
 )
 
-# ✅ This is your Azure DEPLOYMENT NAME, NOT model name
 AZURE_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 
-FUNCTIONS = [
+TOOLS = [
     {
         "name": "get_destination_weather",
         "description": "Fetch weather for a destination id and date range.",
@@ -127,10 +126,11 @@ async def handle_chat_message(message: str, conversation: List[Dict]):
         messages.append({"role": m.get("role", "user"), "content": m.get("content", "")})
     messages.append({"role": "user", "content": message})
 
+    # ✅ FIRST MODEL CALL
     response = client.chat.completions.create(
-        model=AZURE_DEPLOYMENT_NAME,  # ✅ Azure requires DEPLOYMENT name here
+        model=AZURE_DEPLOYMENT_NAME,
         messages=messages,
-        tools=[{"type": "function", "function": fn} for fn in FUNCTIONS],
+        tools=[{"type": "function", "function": fn} for fn in TOOLS],
         tool_choice="auto",
         temperature=0.2,
         max_tokens=1000
@@ -138,34 +138,43 @@ async def handle_chat_message(message: str, conversation: List[Dict]):
 
     msg = response.choices[0].message
 
-    # ✅ TOOL CALL HANDLING
+    # ✅ IF TOOLS ARE REQUESTED — HANDLE ALL TOOL CALLS PROPERLY
     if msg.tool_calls:
-        tool_call = msg.tool_calls[0]
-        fn_name = tool_call.function.name
-        fn_args = json.loads(tool_call.function.arguments)
+        messages.append(msg)  # MUST append the assistant message FIRST
 
-        if fn_name == "get_destination_weather":
-            tool_result = await tool_get_weather(
-                fn_args["location_id"],
-                fn_args["start_date"],
-                fn_args["end_date"]
-            )
-        elif fn_name == "generate_itinerary":
-            tool_result = await tool_generate_itinerary(fn_args)
-        else:
-            tool_result = {"error": "Unknown tool"}
+        tool_messages = []
 
+        for tool_call in msg.tool_calls:
+            fn_name = tool_call.function.name
+            fn_args = json.loads(tool_call.function.arguments)
+
+            if fn_name == "get_destination_weather":
+                tool_result = await tool_get_weather(
+                    fn_args["location_id"],
+                    fn_args["start_date"],
+                    fn_args["end_date"]
+                )
+
+            elif fn_name == "generate_itinerary":
+                tool_result = await tool_generate_itinerary(fn_args)
+
+            else:
+                tool_result = {"error": f"Unknown tool: {fn_name}"}
+
+            # ✅ CRITICAL: Each tool call MUST reply with matching tool_call_id
+            tool_messages.append({
+                "role": "tool",
+                "tool_call_id": tool_call.id,
+                "content": json.dumps(tool_result)
+            })
+
+        # ✅ Add ALL tool responses to messages
+        messages.extend(tool_messages)
+
+        # ✅ SECOND MODEL CALL (FINAL RESPONSE)
         followup = client.chat.completions.create(
             model=AZURE_DEPLOYMENT_NAME,
-            messages=[
-                *messages,
-                msg,
-                {
-                    "role": "tool",
-                    "tool_call_id": tool_call.id,
-                    "content": json.dumps(tool_result)
-                }
-            ],
+            messages=messages,
             temperature=0.2,
             max_tokens=1500
         )
@@ -173,4 +182,5 @@ async def handle_chat_message(message: str, conversation: List[Dict]):
         final_text = followup.choices[0].message.content
         return {"type": "final", "reply": final_text}
 
+    # ✅ NO TOOL CALL → NORMAL CHAT RESPONSE
     return {"type": "reply", "reply": msg.content}
