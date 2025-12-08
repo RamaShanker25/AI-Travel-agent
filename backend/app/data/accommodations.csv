@@ -1,0 +1,301 @@
+hotel_id,city_id,name,category,star_rating,price_per_night_inr,amenities,nearest_attraction,user_rating
+H0001,1,Emerald Inn Delhi,Budget,2,1281,"wifi,breakfast,spa,pool",Delhi Fort,3.4
+H0002,1,Regal Hotel Delhi,Budget,2,2190,"wifi,breakfast,conference_room,parking",Delhi Garden,3.3
+H0003,1,Sunrise Inn Delhi,Mid,3,3052,"wifi,breakfast,pool,parking",Delhi Market,3.1
+H0004,1,Emerald Lodge Delhi,Mid,4,4385,"wifi,breakfast,pool,parking",Delhi Fort,3.1
+H0005,1,Hillview Plaza Delhi,Luxury,4,10016,"wifi,breakfast,gym,parking",Delhi Garden,4.0
+H0006,1,Sunrise Palace Delhi,Luxury,5,15326,"wifi,breakfast,conference_room,parking",Delhi Market,3.4
+H0007,2,Grand Palace Mumbai,Budget,3,1678,"wifi,breakfast,conference_room,parking",Mumbai Market,4.9
+H0008,2,Maple Retreat Mumbai,Budget,3,1652,"wifi,breakfast,parking",Mumbai Market,4.1
+H0009,2,Golden Retreat Mumbai,Mid,3,4130,"wifi,breakfast,parking",Mumbai Fort,3.6
+H0010,2,Serene Inn Mumbai,Mid,4,5650,"wifi,breakfast,conference_room,parking",Mumbai Temple,4.7
+H0011,2,Emerald Residency Mumbai,Luxury,5,24390,"wifi,breakfast,conference_room,parking",Mumbai Viewpoint,4.2
+H0012,2,Blue Lagoon Plaza Mumbai,Luxury,4,19178,"wifi,breakfast,play_area,pool",Mumbai Garden,4.0
+H0013,3,Blue Lagoon Suites Bengaluru,Budget,3,1859,"wifi,breakfast,pool,parking",Bengaluru Temple,4.3
+H0014,3,Serene Resort Bengaluru,Budget,2,1387,"wifi,breakfast,spa,pool",Bengaluru Garden,3.1
+H0015,3,Maple Plaza Bengaluru,Mid,4,6826,"wifi,breakfast,parking",Bengaluru Garden,4.9
+H0016,3,Hillview Lodge Bengaluru,Mid,3,6874,"wifi,breakfast,conference_room,parking",Bengaluru Heritage Site,4.1
+H0017,3,Heritage Palace Bengaluru,Luxury,5,20962,"wifi,breakfast,play_area,pool",Bengaluru Heritage Site,5.0
+H0018,3,Lotus Hotel Bengaluru,Luxury,5,9444,"wifi,breakfast,parking",Bengaluru Heritage Site,4.7
+H0019,4,Hillview Plaza Chennai,Budget,3,2414,"wifi,breakfast,spa,pool",Chennai Viewpoint,3.9
+H0020,4,Palm Retreat Chennai,Budget,2,1700,"wifi,breakfast,parking",Chennai Heritage Site,3.5
+H0021,4,Regal Residency Chennai,Mid,4,5219,"wifi,breakfast,gym,parking",Chennai Viewpoint,4.6
+H0022,4,Hillview Retreat Chennai,Mid,3,6383,"wifi,breakfast,pool,parking",Chennai Heritage Site,3.9
+H0023,4,Palm Resort Chennai,Luxury,5,13438,"wifi,breakfast,play_area,pool",Chennai Temple,3.6
+H0024,4,Serene Retreat Chennai,Luxury,5,14977,"wifi,breakfast,conference_room,parking",Chennai Fort,3.9
+H0025,5,Heritage Inn Kolkata,Budget,2,2777,"wifi,breakfast,parking",Kolkata Heritage Site,4.8
+H0026,5,Regal Palace Kolkata,Budget,3,1717,"wifi,breakfast,conference_room,parking",Kolkata Temple,3.8
+H0027,5,Blue Lagoon Hotel Kolkata,Mid,4,6736,"wifi,breakfast,conference_room,parking",Kolkata Garden,3.1
+H0028,5,Silver Plaza Kolkata,Mid,3,7182,"wifi,breakfast,parking",Kolkata Garden,3.5
+H0029,5,Silver Hotel Kolkata,Luxury,5,21751,"wifi,breakfast,parking",Kolkata Garden,3.7
+H0030,5,Oak Hotel Kolkata,Luxury,4,12792,"wifi,breakfast,pool,parking",Kolkata Garden,3.8
+H0031,6,Palm Retreat Hyderabad,Budget,3,1946,"wifi,breakfast,gym,parking",Hyderabad Fort,4.3
+H0032,6,Grand Palace Hyderabad,Budget,3,1300,"wifi,breakfast,play_area,pool",Hyderabad Garden,4.1
+H0033,6,Maple Inn Hyderabad,Mid,3,6390,"wifi,breakfast,parking",Hyderabad Garden,4.6
+H0034,6,Regal Plaza Hyderabad,Mid,3,6504,"wifi,breakfast,conference_room,parking",Hyderabad Heritage Site,3.5
+H0035,6,Blue Lagoon Resort Hyderabad,Luxury,4,20989,"wifi,breakfast,spa,pool",Hyderabad Viewpoint,4.1
+H0036,6,Royal Retreat Hyderabad,Luxury,4,24558,"wifi,breakfast,play_area,pool",Hyderabad Fort,3.9
+H0037,7,Lotus Plaza Pune,Budget,3,2783,"wifi,breakfast,spa,pool",Pune Temple,4.1
+H0038,7,Maple Hotel Pune,Budget,3,1505,"wifi,breakfast,gym,parking",Pune Fort,3.3
+H0039,7,Heritage Palace Pune,Mid,4,6817,"wifi,breakfast,spa,pool",Pune Garden,4.2
+H0040,7,Sunrise Hotel Pune,Mid,4,4775,"wifi,breakfast,gym,parking",Pune Viewpoint,3.9
+H0041,7,Blue Lagoon Residency Pune,Luxury,5,14508,"wifi,breakfast,spa,pool",Pune Viewpoint,4.1
+H0042,7,Maple Resort Pune,Luxury,5,10776,"wifi,breakfast,parking",Pune Heritage Site,4.5
+H0043,8,Maple Lodge Ahmedabad,Budget,3,1990,"wifi,breakfast,gym,parking",Ahmedabad Viewpoint,4.0
+H0044,8,Sunrise Residency Ahmedabad,Budget,3,2774,"wifi,breakfast,play_area,pool",Ahmedabad Fort,3.8
+H0045,8,Emerald Residency Ahmedabad,Mid,4,4196,"wifi,breakfast,spa,pool",Ahmedabad Fort,3.2
+H0046,8,Royal Suites Ahmedabad,Mid,3,4439,"wifi,breakfast,play_area,pool",Ahmedabad Fort,5.0
+H0047,8,Hillview Palace Ahmedabad,Luxury,4,17243,"wifi,breakfast,pool,parking",Ahmedabad Temple,4.8
+H0048,8,Serene Retreat Ahmedabad,Luxury,5,24408,"wifi,breakfast,conference_room,parking",Ahmedabad Fort,3.7
+H0049,9,Oak Lodge Jaipur,Budget,2,2752,"wifi,breakfast,gym,parking",Jaipur Temple,3.2
+H0050,9,Emerald Retreat Jaipur,Budget,3,2390,"wifi,breakfast,spa,pool",Jaipur Garden,4.7
+H0051,9,Maple Resort Jaipur,Mid,4,3168,"wifi,breakfast,spa,pool",Jaipur Viewpoint,4.9
+H0052,9,Palm Residency Jaipur,Mid,3,6659,"wifi,breakfast,pool,parking",Jaipur Garden,4.8
+H0053,9,Sunrise Inn Jaipur,Luxury,5,8937,"wifi,breakfast,pool,parking",Jaipur Fort,3.3
+H0054,9,Palm Plaza Jaipur,Luxury,5,15688,"wifi,breakfast,play_area,pool",Jaipur Market,5.0
+H0055,10,Emerald Inn Lucknow,Budget,2,2179,"wifi,breakfast,parking",Lucknow Garden,3.8
+H0056,10,Regal Lodge Lucknow,Budget,2,1686,"wifi,breakfast,play_area,pool",Lucknow Heritage Site,3.5
+H0057,10,Palm Resort Lucknow,Mid,3,4287,"wifi,breakfast,spa,pool",Lucknow Heritage Site,4.0
+H0058,10,Sunrise Retreat Lucknow,Mid,4,3083,"wifi,breakfast,spa,pool",Lucknow Fort,4.9
+H0059,10,Grand Lodge Lucknow,Luxury,5,8720,"wifi,breakfast,conference_room,parking",Lucknow Market,4.3
+H0060,10,Heritage Hotel Lucknow,Luxury,5,12639,"wifi,breakfast,play_area,pool",Lucknow Fort,3.6
+H0061,11,Blue Lagoon Residency Agra,Budget,3,1599,"wifi,breakfast,pool,parking",Agra Temple,3.0
+H0062,11,Royal Suites Agra,Budget,3,1745,"wifi,breakfast,gym,parking",Agra Garden,4.7
+H0063,11,Sunrise Hotel Agra,Mid,3,3072,"wifi,breakfast,play_area,pool",Agra Temple,4.3
+H0064,11,Blue Lagoon Plaza Agra,Mid,3,4520,"wifi,breakfast,gym,parking",Agra Heritage Site,4.6
+H0065,11,Blue Lagoon Residency Agra,Luxury,4,15404,"wifi,breakfast,pool,parking",Agra Temple,4.3
+H0066,11,Maple Retreat Agra,Luxury,4,22213,"wifi,breakfast,play_area,pool",Agra Temple,3.7
+H0067,12,Sunrise Suites Varanasi,Budget,2,2735,"wifi,breakfast,gym,parking",Varanasi Temple,3.6
+H0068,12,Blue Lagoon Retreat Varanasi,Budget,3,1306,"wifi,breakfast,gym,parking",Varanasi Fort,4.7
+H0069,12,Palm Lodge Varanasi,Mid,3,3729,"wifi,breakfast,conference_room,parking",Varanasi Fort,4.8
+H0070,12,Heritage Lodge Varanasi,Mid,3,4942,"wifi,breakfast,conference_room,parking",Varanasi Market,4.5
+H0071,12,Maple Inn Varanasi,Luxury,4,13242,"wifi,breakfast,pool,parking",Varanasi Heritage Site,3.4
+H0072,12,Silver Residency Varanasi,Luxury,4,13975,"wifi,breakfast,spa,pool",Varanasi Heritage Site,4.6
+H0073,13,Sunrise Lodge Amritsar,Budget,2,2279,"wifi,breakfast,gym,parking",Amritsar Viewpoint,4.3
+H0074,13,Heritage Inn Amritsar,Budget,2,1694,"wifi,breakfast,play_area,pool",Amritsar Fort,3.2
+H0075,13,Hillview Suites Amritsar,Mid,3,6303,"wifi,breakfast,gym,parking",Amritsar Viewpoint,4.8
+H0076,13,Maple Suites Amritsar,Mid,3,5950,"wifi,breakfast,spa,pool",Amritsar Heritage Site,3.5
+H0077,13,Maple Lodge Amritsar,Luxury,5,23133,"wifi,breakfast,spa,pool",Amritsar Garden,4.1
+H0078,13,Silver Resort Amritsar,Luxury,5,20942,"wifi,breakfast,gym,parking",Amritsar Garden,5.0
+H0079,14,Maple Palace Nagpur,Budget,2,2075,"wifi,breakfast,pool,parking",Nagpur Garden,3.1
+H0080,14,Serene Inn Nagpur,Budget,2,2467,"wifi,breakfast,conference_room,parking",Nagpur Heritage Site,3.3
+H0081,14,Emerald Residency Nagpur,Mid,3,6241,"wifi,breakfast,spa,pool",Nagpur Garden,4.5
+H0082,14,Hillview Inn Nagpur,Mid,3,5584,"wifi,breakfast,gym,parking",Nagpur Viewpoint,4.6
+H0083,14,Regal Lodge Nagpur,Luxury,4,20666,"wifi,breakfast,gym,parking",Nagpur Viewpoint,4.2
+H0084,14,Serene Suites Nagpur,Luxury,4,15125,"wifi,breakfast,play_area,pool",Nagpur Garden,4.6
+H0085,15,Blue Lagoon Suites Indore,Budget,2,1783,"wifi,breakfast,play_area,pool",Indore Temple,3.7
+H0086,15,Lotus Palace Indore,Budget,3,1587,"wifi,breakfast,play_area,pool",Indore Market,3.4
+H0087,15,Sunrise Lodge Indore,Mid,4,4884,"wifi,breakfast,conference_room,parking",Indore Fort,4.4
+H0088,15,Oak Plaza Indore,Mid,3,6256,"wifi,breakfast,gym,parking",Indore Market,4.9
+H0089,15,Silver Plaza Indore,Luxury,4,24954,"wifi,breakfast,conference_room,parking",Indore Fort,4.0
+H0090,15,Royal Resort Indore,Luxury,5,14934,"wifi,breakfast,spa,pool",Indore Market,3.7
+H0091,16,Heritage Lodge Bhopal,Budget,3,2036,"wifi,breakfast,spa,pool",Bhopal Fort,4.5
+H0092,16,Maple Suites Bhopal,Budget,3,1406,"wifi,breakfast,spa,pool",Bhopal Temple,3.2
+H0093,16,Serene Retreat Bhopal,Mid,3,5677,"wifi,breakfast,spa,pool",Bhopal Temple,4.8
+H0094,16,Emerald Retreat Bhopal,Mid,4,3909,"wifi,breakfast,gym,parking",Bhopal Fort,3.7
+H0095,16,Silver Suites Bhopal,Luxury,5,23029,"wifi,breakfast,spa,pool",Bhopal Temple,3.7
+H0096,16,Golden Plaza Bhopal,Luxury,5,11388,"wifi,breakfast,parking",Bhopal Temple,4.4
+H0097,17,Oak Residency Srinagar,Budget,2,1665,"wifi,breakfast,pool,parking",Srinagar Fort,3.6
+H0098,17,Oak Suites Srinagar,Budget,3,1628,"wifi,breakfast,spa,pool",Srinagar Garden,4.5
+H0099,17,Golden Residency Srinagar,Mid,4,5172,"wifi,breakfast,gym,parking",Srinagar Heritage Site,4.3
+H0100,17,Grand Suites Srinagar,Mid,4,5378,"wifi,breakfast,conference_room,parking",Srinagar Garden,3.5
+H0101,17,Emerald Inn Srinagar,Luxury,4,18764,"wifi,breakfast,play_area,pool",Srinagar Garden,3.9
+H0102,17,Emerald Inn Srinagar,Luxury,5,11627,"wifi,breakfast,parking",Srinagar Heritage Site,3.1
+H0103,18,Emerald Retreat Shimla,Budget,3,2689,"wifi,breakfast,play_area,pool",Shimla Market,3.7
+H0104,18,Maple Palace Shimla,Budget,2,1219,"wifi,breakfast,gym,parking",Shimla Market,4.1
+H0105,18,Regal Residency Shimla,Mid,4,3014,"wifi,breakfast,pool,parking",Shimla Temple,4.1
+H0106,18,Emerald Residency Shimla,Mid,4,3279,"wifi,breakfast,pool,parking",Shimla Viewpoint,4.7
+H0107,18,Maple Palace Shimla,Luxury,5,15367,"wifi,breakfast,spa,pool",Shimla Temple,4.7
+H0108,18,Royal Residency Shimla,Luxury,5,22150,"wifi,breakfast,gym,parking",Shimla Temple,3.7
+H0109,19,Serene Resort Manali,Budget,2,2708,"wifi,breakfast,pool,parking",Manali Temple,4.6
+H0110,19,Grand Resort Manali,Budget,2,2578,"wifi,breakfast,pool,parking",Manali Temple,3.4
+H0111,19,Royal Resort Manali,Mid,3,6167,"wifi,breakfast,gym,parking",Manali Temple,4.5
+H0112,19,Regal Hotel Manali,Mid,3,5618,"wifi,breakfast,pool,parking",Manali Garden,3.2
+H0113,19,Maple Palace Manali,Luxury,5,12795,"wifi,breakfast,conference_room,parking",Manali Heritage Site,4.7
+H0114,19,Grand Plaza Manali,Luxury,5,12542,"wifi,breakfast,gym,parking",Manali Temple,3.3
+H0115,20,Royal Residency Ooty,Budget,2,2462,"wifi,breakfast,spa,pool",Ooty Fort,4.7
+H0116,20,Hillview Palace Ooty,Budget,2,2752,"wifi,breakfast,parking",Ooty Viewpoint,4.8
+H0117,20,Hillview Lodge Ooty,Mid,4,3839,"wifi,breakfast,conference_room,parking",Ooty Fort,3.1
+H0118,20,Regal Plaza Ooty,Mid,3,6363,"wifi,breakfast,spa,pool",Ooty Temple,4.9
+H0119,20,Emerald Inn Ooty,Luxury,4,23438,"wifi,breakfast,pool,parking",Ooty Garden,4.6
+H0120,20,Sunrise Suites Ooty,Luxury,5,21911,"wifi,breakfast,conference_room,parking",Ooty Fort,3.6
+H0121,21,Blue Lagoon Lodge Munnar,Budget,2,2124,"wifi,breakfast,parking",Munnar Temple,4.4
+H0122,21,Heritage Retreat Munnar,Budget,2,2264,"wifi,breakfast,spa,pool",Munnar Temple,3.6
+H0123,21,Grand Palace Munnar,Mid,4,4322,"wifi,breakfast,spa,pool",Munnar Fort,3.2
+H0124,21,Silver Residency Munnar,Mid,4,3273,"wifi,breakfast,pool,parking",Munnar Market,3.0
+H0125,21,Regal Inn Munnar,Luxury,5,20133,"wifi,breakfast,conference_room,parking",Munnar Market,3.3
+H0126,21,Hillview Retreat Munnar,Luxury,5,22465,"wifi,breakfast,gym,parking",Munnar Fort,4.8
+H0127,22,Regal Retreat Darjeeling,Budget,2,1490,"wifi,breakfast,gym,parking",Darjeeling Garden,3.1
+H0128,22,Serene Retreat Darjeeling,Budget,2,2184,"wifi,breakfast,parking",Darjeeling Fort,3.6
+H0129,22,Sunrise Retreat Darjeeling,Mid,3,7086,"wifi,breakfast,spa,pool",Darjeeling Temple,5.0
+H0130,22,Grand Residency Darjeeling,Mid,4,7069,"wifi,breakfast,spa,pool",Darjeeling Temple,4.3
+H0131,22,Silver Retreat Darjeeling,Luxury,5,20149,"wifi,breakfast,conference_room,parking",Darjeeling Heritage Site,3.3
+H0132,22,Regal Retreat Darjeeling,Luxury,5,15061,"wifi,breakfast,gym,parking",Darjeeling Temple,3.6
+H0133,23,Regal Palace Nainital,Budget,2,1583,"wifi,breakfast,play_area,pool",Nainital Market,4.4
+H0134,23,Golden Hotel Nainital,Budget,3,2762,"wifi,breakfast,parking",Nainital Market,4.0
+H0135,23,Golden Resort Nainital,Mid,3,4608,"wifi,breakfast,parking",Nainital Temple,4.8
+H0136,23,Regal Inn Nainital,Mid,3,4771,"wifi,breakfast,spa,pool",Nainital Fort,4.6
+H0137,23,Regal Plaza Nainital,Luxury,4,19011,"wifi,breakfast,spa,pool",Nainital Fort,4.3
+H0138,23,Golden Lodge Nainital,Luxury,5,10014,"wifi,breakfast,spa,pool",Nainital Fort,3.4
+H0139,24,Regal Resort Rishikesh,Budget,3,1247,"wifi,breakfast,play_area,pool",Rishikesh Garden,4.4
+H0140,24,Oak Suites Rishikesh,Budget,3,1882,"wifi,breakfast,parking",Rishikesh Market,4.5
+H0141,24,Royal Inn Rishikesh,Mid,4,4755,"wifi,breakfast,conference_room,parking",Rishikesh Garden,3.4
+H0142,24,Palm Resort Rishikesh,Mid,4,5136,"wifi,breakfast,spa,pool",Rishikesh Garden,3.1
+H0143,24,Oak Suites Rishikesh,Luxury,4,12764,"wifi,breakfast,parking",Rishikesh Garden,4.7
+H0144,24,Heritage Lodge Rishikesh,Luxury,4,22041,"wifi,breakfast,conference_room,parking",Rishikesh Garden,4.9
+H0145,25,Oak Plaza Mussoorie,Budget,3,1463,"wifi,breakfast,conference_room,parking",Mussoorie Market,3.1
+H0146,25,Silver Residency Mussoorie,Budget,3,2286,"wifi,breakfast,play_area,pool",Mussoorie Heritage Site,4.2
+H0147,25,Lotus Retreat Mussoorie,Mid,3,4620,"wifi,breakfast,pool,parking",Mussoorie Temple,3.4
+H0148,25,Palm Lodge Mussoorie,Mid,4,6240,"wifi,breakfast,pool,parking",Mussoorie Temple,4.7
+H0149,25,Oak Residency Mussoorie,Luxury,5,9733,"wifi,breakfast,conference_room,parking",Mussoorie Heritage Site,4.9
+H0150,25,Heritage Palace Mussoorie,Luxury,4,15174,"wifi,breakfast,parking",Mussoorie Viewpoint,4.1
+H0151,26,Heritage Plaza Kodaikanal,Budget,2,2474,"wifi,breakfast,gym,parking",Kodaikanal Fort,3.6
+H0152,26,Emerald Lodge Kodaikanal,Budget,3,2148,"wifi,breakfast,pool,parking",Kodaikanal Fort,4.1
+H0153,26,Royal Inn Kodaikanal,Mid,3,5707,"wifi,breakfast,play_area,pool",Kodaikanal Fort,4.5
+H0154,26,Emerald Palace Kodaikanal,Mid,3,3750,"wifi,breakfast,parking",Kodaikanal Garden,4.8
+H0155,26,Silver Hotel Kodaikanal,Luxury,4,13024,"wifi,breakfast,pool,parking",Kodaikanal Fort,3.2
+H0156,26,Sunrise Resort Kodaikanal,Luxury,5,13350,"wifi,breakfast,play_area,pool",Kodaikanal Heritage Site,3.5
+H0157,27,Serene Inn Coorg,Budget,3,2119,"wifi,breakfast,parking",Coorg Market,3.5
+H0158,27,Grand Residency Coorg,Budget,3,1907,"wifi,breakfast,parking",Coorg Temple,4.0
+H0159,27,Lotus Resort Coorg,Mid,3,5956,"wifi,breakfast,spa,pool",Coorg Temple,4.3
+H0160,27,Serene Plaza Coorg,Mid,4,5792,"wifi,breakfast,spa,pool",Coorg Fort,3.8
+H0161,27,Serene Plaza Coorg,Luxury,4,11310,"wifi,breakfast,gym,parking",Coorg Market,4.2
+H0162,27,Golden Plaza Coorg,Luxury,4,10649,"wifi,breakfast,parking",Coorg Market,3.1
+H0163,28,Grand Suites Gulmarg,Budget,3,2635,"wifi,breakfast,pool,parking",Gulmarg Fort,4.6
+H0164,28,Emerald Plaza Gulmarg,Budget,3,2375,"wifi,breakfast,parking",Gulmarg Fort,3.2
+H0165,28,Emerald Residency Gulmarg,Mid,3,7109,"wifi,breakfast,spa,pool",Gulmarg Fort,3.6
+H0166,28,Palm Residency Gulmarg,Mid,3,4547,"wifi,breakfast,play_area,pool",Gulmarg Fort,4.2
+H0167,28,Grand Lodge Gulmarg,Luxury,5,16076,"wifi,breakfast,parking",Gulmarg Garden,4.9
+H0168,28,Heritage Retreat Gulmarg,Luxury,5,15708,"wifi,breakfast,spa,pool",Gulmarg Garden,3.1
+H0169,29,Grand Resort Mount Abu,Budget,3,2561,"wifi,breakfast,gym,parking",Mount Abu Fort,4.8
+H0170,29,Regal Hotel Mount Abu,Budget,3,2416,"wifi,breakfast,conference_room,parking",Mount Abu Fort,3.6
+H0171,29,Oak Resort Mount Abu,Mid,4,5878,"wifi,breakfast,play_area,pool",Mount Abu Heritage Site,4.9
+H0172,29,Golden Palace Mount Abu,Mid,3,4478,"wifi,breakfast,conference_room,parking",Mount Abu Temple,3.7
+H0173,29,Sunrise Residency Mount Abu,Luxury,5,11005,"wifi,breakfast,conference_room,parking",Mount Abu Viewpoint,4.7
+H0174,29,Royal Hotel Mount Abu,Luxury,4,15821,"wifi,breakfast,conference_room,parking",Mount Abu Temple,3.3
+H0175,30,Serene Inn Kasauli,Budget,2,1460,"wifi,breakfast,conference_room,parking",Kasauli Fort,3.0
+H0176,30,Palm Retreat Kasauli,Budget,2,1941,"wifi,breakfast,parking",Kasauli Fort,3.1
+H0177,30,Royal Hotel Kasauli,Mid,3,3525,"wifi,breakfast,play_area,pool",Kasauli Fort,3.8
+H0178,30,Serene Lodge Kasauli,Mid,3,4137,"wifi,breakfast,pool,parking",Kasauli Fort,3.0
+H0179,30,Emerald Inn Kasauli,Luxury,5,22823,"wifi,breakfast,parking",Kasauli Market,4.9
+H0180,30,Royal Palace Kasauli,Luxury,4,17373,"wifi,breakfast,parking",Kasauli Fort,4.8
+H0181,31,Sunrise Inn Lonavala,Budget,3,1935,"wifi,breakfast,gym,parking",Lonavala Fort,5.0
+H0182,31,Heritage Retreat Lonavala,Budget,3,2326,"wifi,breakfast,play_area,pool",Lonavala Viewpoint,3.6
+H0183,31,Emerald Residency Lonavala,Mid,3,3333,"wifi,breakfast,spa,pool",Lonavala Fort,4.6
+H0184,31,Hillview Retreat Lonavala,Mid,4,6058,"wifi,breakfast,gym,parking",Lonavala Fort,4.5
+H0185,31,Emerald Hotel Lonavala,Luxury,5,9108,"wifi,breakfast,gym,parking",Lonavala Viewpoint,3.2
+H0186,31,Palm Retreat Lonavala,Luxury,5,23031,"wifi,breakfast,gym,parking",Lonavala Viewpoint,4.6
+H0187,32,Blue Lagoon Hotel Mahabaleshwar,Budget,3,1501,"wifi,breakfast,spa,pool",Mahabaleshwar Market,4.9
+H0188,32,Emerald Resort Mahabaleshwar,Budget,2,1868,"wifi,breakfast,pool,parking",Mahabaleshwar Temple,3.8
+H0189,32,Serene Lodge Mahabaleshwar,Mid,4,4208,"wifi,breakfast,pool,parking",Mahabaleshwar Fort,3.1
+H0190,32,Grand Retreat Mahabaleshwar,Mid,4,4219,"wifi,breakfast,gym,parking",Mahabaleshwar Temple,3.8
+H0191,32,Regal Lodge Mahabaleshwar,Luxury,5,10273,"wifi,breakfast,pool,parking",Mahabaleshwar Market,4.8
+H0192,32,Hillview Palace Mahabaleshwar,Luxury,5,20938,"wifi,breakfast,conference_room,parking",Mahabaleshwar Viewpoint,4.4
+H0193,33,Serene Residency Panchgani,Budget,3,1232,"wifi,breakfast,spa,pool",Panchgani Heritage Site,3.9
+H0194,33,Hillview Inn Panchgani,Budget,3,1543,"wifi,breakfast,spa,pool",Panchgani Temple,4.9
+H0195,33,Heritage Hotel Panchgani,Mid,3,4326,"wifi,breakfast,parking",Panchgani Viewpoint,3.3
+H0196,33,Royal Plaza Panchgani,Mid,3,5273,"wifi,breakfast,conference_room,parking",Panchgani Heritage Site,3.8
+H0197,33,Hillview Plaza Panchgani,Luxury,4,19701,"wifi,breakfast,pool,parking",Panchgani Garden,4.5
+H0198,33,Palm Palace Panchgani,Luxury,4,23936,"wifi,breakfast,spa,pool",Panchgani Market,3.0
+H0199,34,Blue Lagoon Retreat Kullu,Budget,2,1914,"wifi,breakfast,play_area,pool",Kullu Market,4.1
+H0200,34,Sunrise Residency Kullu,Budget,2,2006,"wifi,breakfast,gym,parking",Kullu Garden,4.3
+H0201,34,Regal Retreat Kullu,Mid,4,3423,"wifi,breakfast,play_area,pool",Kullu Fort,3.8
+H0202,34,Palm Retreat Kullu,Mid,4,3243,"wifi,breakfast,conference_room,parking",Kullu Garden,3.4
+H0203,34,Silver Suites Kullu,Luxury,4,14322,"wifi,breakfast,gym,parking",Kullu Garden,4.7
+H0204,34,Serene Retreat Kullu,Luxury,5,13971,"wifi,breakfast,spa,pool",Kullu Market,3.6
+H0205,35,Royal Palace Leh,Budget,2,2169,"wifi,breakfast,parking",Leh Temple,4.9
+H0206,35,Oak Hotel Leh,Budget,3,2429,"wifi,breakfast,pool,parking",Leh Heritage Site,4.7
+H0207,35,Silver Palace Leh,Mid,3,3492,"wifi,breakfast,conference_room,parking",Leh Market,4.8
+H0208,35,Royal Inn Leh,Mid,4,6554,"wifi,breakfast,gym,parking",Leh Temple,3.0
+H0209,35,Hillview Hotel Leh,Luxury,4,21080,"wifi,breakfast,pool,parking",Leh Market,4.4
+H0210,35,Maple Lodge Leh,Luxury,5,19412,"wifi,breakfast,spa,pool",Leh Temple,3.1
+H0211,36,Sunrise Resort Alleppey,Budget,2,2279,"wifi,breakfast,gym,parking",Alleppey Garden,4.9
+H0212,36,Hillview Retreat Alleppey,Budget,2,2134,"wifi,breakfast,gym,parking",Alleppey Garden,4.4
+H0213,36,Regal Palace Alleppey,Mid,4,6437,"wifi,breakfast,parking",Alleppey Market,3.6
+H0214,36,Silver Resort Alleppey,Mid,4,6339,"wifi,breakfast,pool,parking",Alleppey Market,4.9
+H0215,36,Maple Residency Alleppey,Luxury,4,21086,"wifi,breakfast,gym,parking",Alleppey Heritage Site,4.3
+H0216,36,Regal Retreat Alleppey,Luxury,5,18976,"wifi,breakfast,gym,parking",Alleppey Market,4.9
+H0217,37,Royal Hotel Gokarna,Budget,2,2070,"wifi,breakfast,conference_room,parking",Gokarna Market,4.2
+H0218,37,Hillview Residency Gokarna,Budget,2,2171,"wifi,breakfast,parking",Gokarna Fort,3.1
+H0219,37,Maple Palace Gokarna,Mid,4,4421,"wifi,breakfast,conference_room,parking",Gokarna Viewpoint,3.3
+H0220,37,Sunrise Suites Gokarna,Mid,4,6593,"wifi,breakfast,play_area,pool",Gokarna Garden,3.5
+H0221,37,Silver Suites Gokarna,Luxury,5,21891,"wifi,breakfast,parking",Gokarna Viewpoint,4.3
+H0222,37,Heritage Lodge Gokarna,Luxury,5,13374,"wifi,breakfast,parking",Gokarna Garden,4.4
+H0223,38,Golden Hotel Pondicherry,Budget,3,2124,"wifi,breakfast,pool,parking",Pondicherry Fort,3.1
+H0224,38,Maple Palace Pondicherry,Budget,2,2140,"wifi,breakfast,parking",Pondicherry Heritage Site,3.9
+H0225,38,Palm Inn Pondicherry,Mid,4,6004,"wifi,breakfast,parking",Pondicherry Viewpoint,3.5
+H0226,38,Oak Retreat Pondicherry,Mid,3,6911,"wifi,breakfast,parking",Pondicherry Heritage Site,3.1
+H0227,38,Sunrise Hotel Pondicherry,Luxury,5,18887,"wifi,breakfast,parking",Pondicherry Fort,4.9
+H0228,38,Maple Hotel Pondicherry,Luxury,5,21753,"wifi,breakfast,conference_room,parking",Pondicherry Market,4.1
+H0229,39,Golden Palace Varkala,Budget,3,1801,"wifi,breakfast,parking",Varkala Fort,3.3
+H0230,39,Palm Retreat Varkala,Budget,3,1733,"wifi,breakfast,pool,parking",Varkala Heritage Site,4.1
+H0231,39,Silver Suites Varkala,Mid,4,7086,"wifi,breakfast,spa,pool",Varkala Market,3.2
+H0232,39,Silver Retreat Varkala,Mid,4,7483,"wifi,breakfast,pool,parking",Varkala Temple,4.3
+H0233,39,Oak Residency Varkala,Luxury,4,19385,"wifi,breakfast,conference_room,parking",Varkala Heritage Site,3.6
+H0234,39,Royal Hotel Varkala,Luxury,4,10492,"wifi,breakfast,play_area,pool",Varkala Heritage Site,5.0
+H0235,40,Golden Retreat Hampi,Budget,2,2575,"wifi,breakfast,gym,parking",Hampi Garden,4.5
+H0236,40,Emerald Suites Hampi,Budget,2,2786,"wifi,breakfast,conference_room,parking",Hampi Fort,3.0
+H0237,40,Hillview Suites Hampi,Mid,3,3517,"wifi,breakfast,play_area,pool",Hampi Viewpoint,4.5
+H0238,40,Hillview Plaza Hampi,Mid,4,3385,"wifi,breakfast,conference_room,parking",Hampi Temple,4.9
+H0239,40,Royal Suites Hampi,Luxury,4,17588,"wifi,breakfast,conference_room,parking",Hampi Heritage Site,4.6
+H0240,40,Heritage Hotel Hampi,Luxury,5,13536,"wifi,breakfast,parking",Hampi Fort,4.1
+H0241,41,Maple Inn Vadodara,Budget,2,1786,"wifi,breakfast,spa,pool",Vadodara Fort,3.7
+H0242,41,Regal Residency Vadodara,Budget,3,1517,"wifi,breakfast,spa,pool",Vadodara Fort,4.6
+H0243,41,Oak Resort Vadodara,Mid,4,6822,"wifi,breakfast,play_area,pool",Vadodara Fort,4.9
+H0244,41,Blue Lagoon Inn Vadodara,Mid,3,7253,"wifi,breakfast,conference_room,parking",Vadodara Viewpoint,3.7
+H0245,41,Golden Retreat Vadodara,Luxury,4,14068,"wifi,breakfast,play_area,pool",Vadodara Fort,3.9
+H0246,41,Regal Resort Vadodara,Luxury,4,18555,"wifi,breakfast,conference_room,parking",Vadodara Viewpoint,3.5
+H0247,42,Lotus Inn Surat,Budget,3,1447,"wifi,breakfast,spa,pool",Surat Heritage Site,4.3
+H0248,42,Sunrise Lodge Surat,Budget,2,1535,"wifi,breakfast,parking",Surat Heritage Site,3.5
+H0249,42,Silver Retreat Surat,Mid,4,6486,"wifi,breakfast,conference_room,parking",Surat Garden,4.0
+H0250,42,Hillview Retreat Surat,Mid,4,7363,"wifi,breakfast,play_area,pool",Surat Heritage Site,4.6
+H0251,42,Grand Hotel Surat,Luxury,4,20637,"wifi,breakfast,pool,parking",Surat Heritage Site,4.1
+H0252,42,Golden Retreat Surat,Luxury,4,21192,"wifi,breakfast,play_area,pool",Surat Heritage Site,4.0
+H0253,43,Palm Residency Jodhpur,Budget,3,2474,"wifi,breakfast,play_area,pool",Jodhpur Market,4.9
+H0254,43,Emerald Lodge Jodhpur,Budget,2,1557,"wifi,breakfast,play_area,pool",Jodhpur Market,4.9
+H0255,43,Emerald Suites Jodhpur,Mid,3,5854,"wifi,breakfast,play_area,pool",Jodhpur Temple,4.2
+H0256,43,Sunrise Palace Jodhpur,Mid,3,5494,"wifi,breakfast,conference_room,parking",Jodhpur Heritage Site,4.8
+H0257,43,Emerald Retreat Jodhpur,Luxury,4,10251,"wifi,breakfast,spa,pool",Jodhpur Heritage Site,4.9
+H0258,43,Oak Inn Jodhpur,Luxury,5,20845,"wifi,breakfast,parking",Jodhpur Garden,3.0
+H0259,44,Royal Hotel Bhubaneswar,Budget,3,1244,"wifi,breakfast,spa,pool",Bhubaneswar Heritage Site,3.6
+H0260,44,Heritage Lodge Bhubaneswar,Budget,3,1643,"wifi,breakfast,parking",Bhubaneswar Fort,4.2
+H0261,44,Hillview Palace Bhubaneswar,Mid,3,7208,"wifi,breakfast,gym,parking",Bhubaneswar Fort,3.6
+H0262,44,Hillview Retreat Bhubaneswar,Mid,4,5689,"wifi,breakfast,play_area,pool",Bhubaneswar Fort,4.8
+H0263,44,Golden Suites Bhubaneswar,Luxury,5,15614,"wifi,breakfast,play_area,pool",Bhubaneswar Heritage Site,3.4
+H0264,44,Grand Lodge Bhubaneswar,Luxury,5,23677,"wifi,breakfast,spa,pool",Bhubaneswar Temple,4.9
+H0265,45,Grand Lodge Manali,Budget,3,1665,"wifi,breakfast,spa,pool",Manali Heritage Site,3.7
+H0266,45,Regal Resort Manali,Budget,2,1653,"wifi,breakfast,spa,pool",Manali Heritage Site,3.8
+H0267,45,Blue Lagoon Hotel Manali,Mid,3,3568,"wifi,breakfast,gym,parking",Manali Heritage Site,3.5
+H0268,45,Sunrise Hotel Manali,Mid,3,3471,"wifi,breakfast,play_area,pool",Manali Heritage Site,4.2
+H0269,45,Blue Lagoon Hotel Manali,Luxury,4,9165,"wifi,breakfast,parking",Manali Viewpoint,3.2
+H0270,45,Grand Residency Manali,Luxury,4,10892,"wifi,breakfast,parking",Manali Viewpoint,3.2
+H0271,46,Oak Inn Gulmarg,Budget,2,2648,"wifi,breakfast,play_area,pool",Gulmarg Fort,3.9
+H0272,46,Maple Residency Gulmarg,Budget,3,2245,"wifi,breakfast,play_area,pool",Gulmarg Viewpoint,3.7
+H0273,46,Heritage Resort Gulmarg,Mid,4,5458,"wifi,breakfast,parking",Gulmarg Fort,3.3
+H0274,46,Sunrise Plaza Gulmarg,Mid,3,5889,"wifi,breakfast,pool,parking",Gulmarg Heritage Site,3.4
+H0275,46,Golden Resort Gulmarg,Luxury,4,24450,"wifi,breakfast,play_area,pool",Gulmarg Garden,4.8
+H0276,46,Lotus Hotel Gulmarg,Luxury,4,11126,"wifi,breakfast,play_area,pool",Gulmarg Viewpoint,4.1
+H0277,47,Grand Inn Vadodara,Budget,2,1797,"wifi,breakfast,play_area,pool",Vadodara Fort,4.0
+H0278,47,Oak Suites Vadodara,Budget,3,1810,"wifi,breakfast,pool,parking",Vadodara Fort,3.5
+H0279,47,Emerald Lodge Vadodara,Mid,4,6007,"wifi,breakfast,pool,parking",Vadodara Temple,4.3
+H0280,47,Palm Residency Vadodara,Mid,4,3044,"wifi,breakfast,spa,pool",Vadodara Fort,4.4
+H0281,47,Maple Inn Vadodara,Luxury,5,9020,"wifi,breakfast,conference_room,parking",Vadodara Temple,3.2
+H0282,47,Emerald Lodge Vadodara,Luxury,4,14942,"wifi,breakfast,parking",Vadodara Market,4.0
+H0283,48,Heritage Resort Kullu,Budget,3,2282,"wifi,breakfast,spa,pool",Kullu Viewpoint,3.2
+H0284,48,Oak Resort Kullu,Budget,3,2498,"wifi,breakfast,pool,parking",Kullu Garden,4.3
+H0285,48,Serene Resort Kullu,Mid,3,5059,"wifi,breakfast,spa,pool",Kullu Garden,4.2
+H0286,48,Heritage Retreat Kullu,Mid,4,3783,"wifi,breakfast,gym,parking",Kullu Market,3.8
+H0287,48,Heritage Suites Kullu,Luxury,4,21930,"wifi,breakfast,play_area,pool",Kullu Garden,3.5
+H0288,48,Maple Residency Kullu,Luxury,4,16501,"wifi,breakfast,conference_room,parking",Kullu Garden,4.3
+H0289,49,Emerald Suites Leh,Budget,2,1255,"wifi,breakfast,gym,parking",Leh Fort,4.4
+H0290,49,Silver Resort Leh,Budget,3,2695,"wifi,breakfast,parking",Leh Fort,3.7
+H0291,49,Oak Resort Leh,Mid,3,6584,"wifi,breakfast,play_area,pool",Leh Fort,4.6
+H0292,49,Palm Hotel Leh,Mid,3,6528,"wifi,breakfast,play_area,pool",Leh Heritage Site,3.1
+H0293,49,Grand Hotel Leh,Luxury,5,11600,"wifi,breakfast,play_area,pool",Leh Fort,4.1
+H0294,49,Emerald Hotel Leh,Luxury,4,23878,"wifi,breakfast,conference_room,parking",Leh Heritage Site,5.0
+H0295,50,Maple Plaza Mahabaleshwar,Budget,2,1355,"wifi,breakfast,pool,parking",Mahabaleshwar Garden,3.7
+H0296,50,Hillview Palace Mahabaleshwar,Budget,2,2590,"wifi,breakfast,spa,pool",Mahabaleshwar Temple,3.1
+H0297,50,Lotus Residency Mahabaleshwar,Mid,4,4889,"wifi,breakfast,spa,pool",Mahabaleshwar Fort,4.8
+H0298,50,Blue Lagoon Plaza Mahabaleshwar,Mid,3,4792,"wifi,breakfast,play_area,pool",Mahabaleshwar Fort,3.0
+H0299,50,Royal Hotel Mahabaleshwar,Luxury,4,17204,"wifi,breakfast,parking",Mahabaleshwar Temple,3.7
+H0300,50,Lotus Lodge Mahabaleshwar,Luxury,5,18300,"wifi,breakfast,conference_room,parking",Mahabaleshwar Temple,4.9
