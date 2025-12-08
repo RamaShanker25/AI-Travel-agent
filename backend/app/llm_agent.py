@@ -1,9 +1,9 @@
 import os, json
-import openai
 from typing import List, Dict
+from openai import OpenAI
 from .tools import tool_get_weather, tool_generate_itinerary, load_data_snapshot
 
-openai.api_key = os.getenv("OPENAI_API_KEY", "")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 MODEL = os.getenv("LLM_MODEL", "gpt-4o-mini")
 
@@ -23,7 +23,7 @@ FUNCTIONS = [
     },
     {
         "name": "generate_itinerary",
-        "description": "Generate a structured itinerary using CSV data. All factual details should come from this tool's output.",
+        "description": "Generate a structured itinerary using CSV data. All factual details come from this tool.",
         "parameters": {
             "type": "object",
             "properties": {
@@ -40,56 +40,77 @@ FUNCTIONS = [
 
 def build_system_prompt() -> str:
     data_snapshot = load_data_snapshot(max_locations=8)
-    system = f"""You are a professional travel planner assistant. Use the provided tools to fetch factual information from the application's CSV dataset.
+    return f"""
+You are a professional travel planner assistant.
+
 RULES:
-1) Do NOT invent factual items such as hotel names, activity durations, distances, transport modes, or costs. Any factual detail must come from the tools.
-2) You may ask follow-up questions when required (destination, dates, budget_tier).
-3) You may produce atmospheric/advisory language (packing tips, clothing, photography suggestions).
-4) When enough information is gathered, call the appropriate tool(s) - typically get_destination_weather and generate_itinerary - using function calling.
-Data snapshot (sample of CSV rows to help grounding):
+1. Never invent hotels, activities, transport, or costs.
+2. Ask follow-up questions if destination, dates, or budget are missing.
+3. Use tools when enough information is available.
+4. You may add atmospheric tips (clothing, photography, etc).
+
+Data snapshot (ground truth):
 {data_snapshot}
 """
-    return system
 
 async def handle_chat_message(message: str, conversation: List[Dict]):
-    system = build_system_prompt()
-    messages = [{"role": "system", "content": system}]
+    system_prompt = build_system_prompt()
+
+    messages = [{"role": "system", "content": system_prompt}]
     for m in conversation:
         messages.append({"role": m.get("role", "user"), "content": m.get("content", "")})
     messages.append({"role": "user", "content": message})
 
-    resp = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model=MODEL,
         messages=messages,
-        functions=FUNCTIONS,
-        function_call="auto",
+        tools=[
+            {
+                "type": "function",
+                "function": fn
+            } for fn in FUNCTIONS
+        ],
+        tool_choice="auto",
         temperature=0.2,
-        max_tokens=1000,
+        max_tokens=1000
     )
 
-    choice = resp["choices"][0]
-    msg = choice["message"]
+    msg = response.choices[0].message
 
-    if msg.get("function_call"):
-        fname = msg["function_call"]["name"]
-        fargs = json.loads(msg["function_call"].get("arguments", "{}"))
+    # ✅ TOOL CALL HANDLING
+    if msg.tool_calls:
+        tool_call = msg.tool_calls[0]
+        fn_name = tool_call.function.name
+        fn_args = json.loads(tool_call.function.arguments)
 
-        if fname == "get_destination_weather":
-            tool_result = await tool_get_weather(fargs["location_id"], fargs["start_date"], fargs["end_date"])
-        elif fname == "generate_itinerary":
-            tool_result = await tool_generate_itinerary(fargs)
+        if fn_name == "get_destination_weather":
+            tool_result = await tool_get_weather(
+                fn_args["location_id"],
+                fn_args["start_date"],
+                fn_args["end_date"]
+            )
+        elif fn_name == "generate_itinerary":
+            tool_result = await tool_generate_itinerary(fn_args)
         else:
-            tool_result = {"error": f"Unknown tool {fname}"}
+            tool_result = {"error": "Unknown tool"}
 
-        messages.append({"role": "assistant", "content": None, "function_call": msg["function_call"]})
-        messages.append({"role": "function", "name": fname, "content": json.dumps(tool_result)})
-        followup = openai.ChatCompletion.create(
+        followup = client.chat.completions.create(
             model=MODEL,
-            messages=messages,
+            messages=[
+                *messages,
+                msg,
+                {
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "content": json.dumps(tool_result)
+                }
+            ],
             temperature=0.2,
             max_tokens=1500
         )
-        final = followup["choices"][0]["message"]["content"]
-        return {"type": "final", "reply": final, "tool": fname, "tool_output": tool_result}
 
-    return {"type": "reply", "reply": msg.get("content", "")}
+        final_text = followup.choices[0].message.content
+        return {"type": "final", "reply": final_text}
+
+    # ✅ NORMAL TEXT RESPONSE
+    return {"type": "reply", "reply": msg.content}
